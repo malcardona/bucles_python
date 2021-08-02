@@ -70,35 +70,40 @@ while True:
         op = input('Operacion: Suma (+) Resta (-) Multiplicación (*) División (/) Exponente/Potencia (**)\n')
         if (op == '+') or (op == '-') or (op == '*') or (op == '/') or (op == '**'):
             cond3 = True
-        else:
-            print('Operación ingresado no válida!')
 
-    # Suma
-    if op == '+':
-        resultado = x + y
-        print('> {} + {} = {} <'.format(x, y, resultado))
+        elif cond3 == False:
+            print('Operación ingresada no válida!')
 
-    # Resta
-    elif op == '-':
-        resultado = x - y
-        print('> {} - {} = {} <'.format(x, y, resultado))
+        # Suma
+        if op == '+':
+            resultado = int(x) + int(y)
+            print('> {} + {} = {} <'.format(x, y, resultado))
 
-    # Multiplicación
-    elif op == '*':
-        resultado = x * y
-        print('> {} * {} = {} <'.format(x, y, resultado))
+        # Resta
+        elif op == '-':
+            resultado = int(x) - int(y)
+            print('> {} - {} = {} <'.format(x, y, resultado))
 
-    # Divición
-    elif op == '/':
-        resultado = x / y
-        print('> {} / {} = {} <'.format(x, y, resultado))
+        # Multiplicación
+        elif op == '*':
+            resultado = int(x) * int(y)
+            print('> {} * {} = {} <'.format(x, y, resultado))
 
-    # Multiplicación
-    elif op == '**':
-        resultado = x ** y
-        print('> {} ** {} = {} <'.format(x, y, resultado))
+        # Divición
+        elif op == '/':
+            resultado = int(x) / int(y)
+            print('> {} / {} = {} <'.format(x, y, resultado))
 
-    op = None
+        # Multiplicación
+        elif op == '**':
+            resultado = int(x) ** int(y)
+            print('> {} ** {} = {} <'.format(x, y, resultado))
+
+    cond1 = False
+    cond2 = False
+    cond3 = False
+
+    
 
 
 
