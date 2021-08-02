@@ -35,3 +35,70 @@ alguno de lo soportados o no es la palabra "FIN".
 
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
+
+# Condiciones para los bucles "while"
+cond1 = False
+cond2 = False
+cond3 = False
+
+
+print("Ingrese dos numeros seguidos de la operacion que quiere realizar")
+
+# Bucle "While"
+while True:
+    # Primer variable (x)
+    x = input('Primer número (o FIN para terminar)\n')
+    cond1 = x.isdigit()
+    while (cond1 == False) and x != 'FIN':
+        print('Caracter ingresado no válido!')
+        x = input('Primer número (o FIN para terminar)\n')
+        cond1 = x.isdigit()
+            
+    if x == 'FIN':
+        print('bye!')
+        break        
+
+    # Segunda variable
+    while cond2 == False:
+        y = input('Segundo número\n')
+        cond2 = y.isdigit()
+        if cond2 == False:
+            print('Caracter ingresado no válido!')
+
+    # Selecion de Operación
+    while cond3 == False:
+        op = input('Operacion: Suma (+) Resta (-) Multiplicación (*) División (/) Exponente/Potencia (**)\n')
+        if (op == '+') or (op == '-') or (op == '*') or (op == '/') or (op == '**'):
+            cond3 = True
+        else:
+            print('Operación ingresado no válida!')
+
+    # Suma
+    if op == '+':
+        resultado = x + y
+        print('> {} + {} = {} <'.format(x, y, resultado))
+
+    # Resta
+    elif op == '-':
+        resultado = x - y
+        print('> {} - {} = {} <'.format(x, y, resultado))
+
+    # Multiplicación
+    elif op == '*':
+        resultado = x * y
+        print('> {} * {} = {} <'.format(x, y, resultado))
+
+    # Divición
+    elif op == '/':
+        resultado = x / y
+        print('> {} / {} = {} <'.format(x, y, resultado))
+
+    # Multiplicación
+    elif op == '**':
+        resultado = x ** y
+        print('> {} ** {} = {} <'.format(x, y, resultado))
+
+    op = None
+
+
+
