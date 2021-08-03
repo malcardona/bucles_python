@@ -47,7 +47,7 @@ print("Ingrese dos numeros seguidos de la operacion que quiere realizar")
 # Bucle "While"
 while True:
     # Primer variable (x)
-    x = input('Primer número (o FIN para terminar)\n')
+    x = input('Primer número: (o FIN para terminar)\n')
     cond1 = x.isdigit()
     while (cond1 == False) and x != 'FIN':
         print('Caracter ingresado no válido!')
@@ -60,14 +60,14 @@ while True:
 
     # Segunda variable
     while cond2 == False:
-        y = input('Segundo número\n')
+        y = input('Segundo número:\n')
         cond2 = y.isdigit()
         if cond2 == False:
             print('Caracter ingresado no válido!')
 
     # Selecion de Operación
     while cond3 == False:
-        op = input('Operacion: Suma (+) Resta (-) Multiplicación (*) División (/) Exponente/Potencia (**)\n')
+        op = input('Operacion: Suma (+) Resta (-) Multiplicación (*) División (/) Exponente/Potencia (**):\n')
         if (op == '+') or (op == '-') or (op == '*') or (op == '/') or (op == '**'):
             cond3 = True
 
