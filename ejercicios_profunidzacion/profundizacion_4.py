@@ -50,6 +50,15 @@ temperatura_promedio = 0    # Al finalizar el loop deberá aquí alamcenar el pr
 temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la lista
 
 # Colocar el bucle aqui......
+for t in temp_dataloger:
+    temperatura_sumatoria += t
+    temperatura_len += 1
+    if (temperatura_max == None) or (t > temperatura_max):
+        temperatura_max = t
+    elif (temperatura_min == None) or (t < temperatura_min):
+        temperatura_min = t
+
+    
 
 # Al finalizar el bucle compare si el valor que usted calculó para
 # temperatura_max y temperatura_min coincide con el que podría calcular
@@ -57,12 +66,26 @@ temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la
 # función "max" --> https://www.w3schools.com/python/ref_func_max.asp
 # función "min" --> https://www.w3schools.com/python/ref_func_min.asp
 
+temperatura_max = max(temp_dataloger) 
+if temperatura_max == temperatura_max:
+    print('Las Temperaturas Máximas Coinciden')
+
+temperatura_min = min(temp_dataloger)
+if temperatura_min == temperatura_min:
+    print('Las Temperaturas Mínimas Coinciden')
+
 # Al finalizar el bucle debe calcular el promedio como:
 # temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
+
+temperatura_promedio = temperatura_sumatoria / temperatura_len 
 
 # Corroboren los resultados de temperatura_sumatoria
 # usando la función "sum"
 # función "sum" --> https://www.w3schools.com/python/ref_func_sum.asp
+
+sum_py = sum(temp_dataloger)
+if temperatura_sumatoria == sum_py:
+    print('Las Sumatorias Coinciden')
 
 '''
 Una vez que tengamos nuestros valores correctamente calculados debemos
@@ -81,5 +104,20 @@ https://es.weatherspark.com/y/28981/Clima-promedio-en-Buenos-Aires-Argentina-dur
 
 # En base a los rangos de temperatura de cada estación,
 # ¿En qué época del año nos encontramos?
+
+if (temperatura_min >= 19) and (temperatura_max >= 28):
+    estacion = 'Verano'
+
+elif (temperatura_min >= 11) and (temperatura_max >= 20):
+    estacion = 'Otoño'
+
+elif (temperatura_min >= 8) and (temperatura_max >= 14):
+    estacion = 'Invierno'
+
+elif (temperatura_min >= 10) and (temperatura_max >= 24):
+    estacion = 'Primavera'
+
 # Imprima el resultado en pantalla
 # Debe utilizar temperatura_max y temperatura_min para definirlo
+
+print('En realcion a los valores de Temperatura maxima ({}) y Minima ({})\n La estacion del año es {}'.format(temperatura_min,temperatura_max, estacion))
