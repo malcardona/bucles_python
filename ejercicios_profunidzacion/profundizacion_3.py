@@ -24,11 +24,11 @@ hemos definido al comienzo del archivo
 
 Luego transformar la califiación en una letra
 según la siguiente escala:
-- Si el puntaje es mayor igual a 90 --> imprimir A
-- Si el puntaje es mayor igual a 80 --> imprimir B
-- Si el puntaje es mayor igual a 70 --> imprimir C
-- Si el puntaje es mayor igual a 60 --> imprimir D
-- Si el puntaje es menor a  60      --> imprimir F
+- Si el promedio es mayor igual a 90 --> imprimir A
+- Si el promedio es mayor igual a 80 --> imprimir B
+- Si el promedio es mayor igual a 70 --> imprimir C
+- Si el promedio es mayor igual a 60 --> imprimir D
+- Si el promedio es menor a  60      --> imprimir F
 
 A medida que recorre las notas, no debe considerar como válidas aquellas
 que son negativas, en ese caso el alumno estuvo ausente
@@ -49,10 +49,40 @@ cantidad_ausentes = 0   # Aquí debe contar cuantos ausentes hubo
 # Realice aquí el bucle para recorrer todas las notas
 # y cacular la sumatoria
 
+for n in notas:
+    if n >= 0:
+        sumatoria += n
+        cantidad_notas += 1
+    else:
+        cantidad_ausentes += 1
+
 # Terminado el bucle calcule el promedio como
 # promedio = sumatoria / cantidad_notas
+
+promedio = sumatoria / cantidad_notas
 
 # Utilice la nota promedio calculada y transformela
 # a calificación con letras, imprima en pantalla el resultado
 
+if promedio > 0 and promedio <= 100:
+    if promedio >= 90:
+        cal = str('A')
+        print('Calificación = {} ({})'.format(cal, promedio))
+    elif promedio >= 80:
+        cal = str('B')
+        print('Calificación = {} ({})'.format(cal, promedio))
+    elif promedio >= 70:
+        cal = str('C')
+        print('Calificación = {} ({})'.format(cal, promedio))
+    elif promedio >= 60:
+        cal = str('D')
+        print('Calificación = {} ({})'.format(cal, promedio))
+    elif promedio < 60:
+        cal = str('F')
+        print('Calificación = {} ({})'.format(cal, promedio))
+else:
+    print('promedio no válido')
+
 # Imprima en pantalla al cantidad de ausentes
+
+print('Cantidad de Ausentes: {}'.format(cantidad_ausentes))
