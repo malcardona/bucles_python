@@ -29,7 +29,7 @@ x = 5
 # Además, complete la línea de código necesaria para que
 # el valor de "x" decremente "1" en cada iteración
 
-while x > 0:    # reemplace "condicion" por lo que crea necesario
+while x >= 0:    # reemplace "condicion" por lo que crea necesario
     print("Valor de x =", x)
     # Coloque la línea de código para que "X" decremente "1"
     x -= 1
