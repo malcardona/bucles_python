@@ -68,11 +68,11 @@ for t in temp_dataloger:
 
 temperatura_max = max(temp_dataloger) 
 if temperatura_max == temperatura_max:
-    print('Las Temperaturas Máximas Coinciden')
+    print('Las Temperaturas Máximas Coinciden ({})'.format(temperatura_max))
 
 temperatura_min = min(temp_dataloger)
 if temperatura_min == temperatura_min:
-    print('Las Temperaturas Mínimas Coinciden')
+    print('Las Temperaturas Mínimas Coinciden ({})'.format(temperatura_min))
 
 # Al finalizar el bucle debe calcular el promedio como:
 # temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
@@ -85,7 +85,7 @@ temperatura_promedio = temperatura_sumatoria / temperatura_len
 
 sum_py = sum(temp_dataloger)
 if temperatura_sumatoria == sum_py:
-    print('Las Sumatorias Coinciden')
+    print('Las Sumatorias Coinciden ({})'.format(temperatura_sumatoria))
 
 '''
 Una vez que tengamos nuestros valores correctamente calculados debemos
@@ -120,4 +120,4 @@ elif (temperatura_min >= 10) and (temperatura_max >= 24):
 # Imprima el resultado en pantalla
 # Debe utilizar temperatura_max y temperatura_min para definirlo
 
-print('En realcion a los valores de Temperatura maxima ({}) y Minima ({})\n La estacion del año es {}'.format(temperatura_min,temperatura_max, estacion))
+print('En relación a los valores de Temperatura Máxima ({}°C) y Mínima ({}°C)\nLa estacion del año es {}'.format(temperatura_min,temperatura_max, estacion))
