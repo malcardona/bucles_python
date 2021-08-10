@@ -26,6 +26,6 @@ for color in colores:
 # for i ...
 
 for x in range(len(colores)):
-    print(colores[x])
+    print('Índice: {} - Colores {}'.format(x, colores[x]))
 
 print("terminamos!")
